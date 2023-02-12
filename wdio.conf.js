@@ -27,7 +27,9 @@ exports.config = {
     //
     specs: [
         //'app/test/specs/**.js'
-        'app/test/specs/ios-findElements.spec.js'
+        'app/test/specs/ios/*.js'
+
+        //'app/test/specs/ios-native.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -58,10 +60,11 @@ exports.config = {
     capabilities: [{
 
         platformName: "ios",
-        "appium:platformVersion": "15.5",
-        "appium:deviceName": "iPhone 11",
+        "appium:platformVersion": "14.5",
+        "appium:deviceName": "iPhone 12 Pro",
         "appium:automationName": "XCUITest",
-        "appium:app": path.join(process.cwd(), "./app/ios/UIKitCatalog.app"),
+        // "appium:app": path.join(process.cwd(), "./app/ios/UIKitCatalog.app"),
+        "appium:app": path.join(process.cwd(), "./app/ios/MVCTodo.app"),
 
     }],
     //
